@@ -1,0 +1,44 @@
+{
+  "name": "react-redux",
+  "version": "1.0.0",
+  "description": "Building a React and Redux app without using the create-react-app tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchlrtnz/React-Redux.git"
+  },
+  "keywords": [
+    "React",
+    "Redux"
+  ],
+  "author": "Michael Ortanez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mchlrtnz/React-Redux/issues"
+  },
+  "homepage": "https://github.com/mchlrtnz/React-Redux#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}

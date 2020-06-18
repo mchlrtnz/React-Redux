@@ -1,0 +1,103 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(243, 236, 236);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+
+  background-color: #3f9761;  
+
+  @media only screen and (max-width: 600px){
+    background-color: red;
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    transition: all .3s;
+    box-sizing: border-box;
+    font-size: 2.8rem;
+    &:hover {
+      color: pink;
+      text-decoration: underline;
+      background-color: blue;
+    }
+  }
+  .flex-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 1200px) {
+      flex-direction: row;
+    }
+
+  }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box {
+  @include transform(rotate(30deg));
+}
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  font-size: 2.4rem;
+}
+
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+.autoplacement-example {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  
+  @media only screen and (max-width: 600px){
+    justify-content: center;
+    align-items: center;
+  }
+}
